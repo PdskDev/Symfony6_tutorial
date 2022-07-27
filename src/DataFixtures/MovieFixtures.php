@@ -13,8 +13,8 @@ class MovieFixtures extends Fixture
         $movie = new Movie() ;
         $movie->setTitle('Batman');
         $movie->setReleaseYear(2019);
-        $movie->setDescription('Le retour de Batman');
-        $movie->setImagePath('https://cdn.pixabay.com/photo/2021/06/18/11/24/batman-6345922_1280.jpg');
+        $movie->setDescription('Lorem ipsum dolor sit amet consectetur adipisicing elit. Et cum a dignissimos corporis distinctio saepe molestiae excepturi iusto modi blanditiis!'); 
+        $movie->setImagePath('https://cdn.pixabay.com/photo/2017/09/04/10/35/batman-2713459_1280.jpg');
         $movie->addActor($this->getReference('actor_1'));
         $movie->addActor($this->getReference('actor_2'));
         $manager->persist($movie);
@@ -22,8 +22,8 @@ class MovieFixtures extends Fixture
         $movie2 = new Movie() ;
         $movie2->setTitle('Spiderman');
         $movie2->setReleaseYear(2020);
-        $movie2->setDescription('Le superhéro sauve NY');
-        $movie2->setImagePath('https://cdn.pixabay.com/photo/2020/09/11/00/06/spiderman-5561671_1280.jpg');
+        $movie2->setDescription('Lorem ipsum dolor sit amet consectetur adipisicing elit. Et cum a dignissimos corporis distinctio saepe molestiae excepturi iusto modi blanditiis!');
+        $movie2->setImagePath('https://cdn.pixabay.com/photo/2022/05/16/10/11/spiderman-7199970_1280.jpg');
         $movie2->addActor($this->getReference('actor_3'));
         $movie2->addActor($this->getReference('actor_4'));
         $manager->persist($movie2);
@@ -31,7 +31,7 @@ class MovieFixtures extends Fixture
         $movie3 = new Movie() ;
         $movie3->setTitle('Lego Superman');
         $movie3->setReleaseYear(2021);
-        $movie3->setDescription('Le héro ne meurt jamais!');
+        $movie3->setDescription('Lorem ipsum dolor sit amet consectetur adipisicing elit. Et cum a dignissimos corporis distinctio saepe molestiae excepturi iusto modi blanditiis!');
         $movie3->setImagePath('https://cdn.pixabay.com/photo/2018/08/23/17/16/superman-3626231_1280.jpg');
         $movie3->addActor($this->getReference('actor_5'));
         $movie3->addActor($this->getReference('actor_6'));
