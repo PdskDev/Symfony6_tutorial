@@ -3,42 +3,42 @@
 {% block body %}
 	<div class="w-4/5 m-auto text-center">
 		<div class="py-12 border-b border-gray-200">
-			<h1 class="text-6xl pt-12 pb-8">
+			<h1 class="pt-12 pb-8 text-6xl">
 				Movies Review ({{ movies|length }})
 			</h1>
 
-			<span class="font-light text-gray-500 italic">
+			<span class="italic font-light text-gray-500">
 				Created by Code With Dary
 			</span>
 		</div>
 	</div>
 
-	<div class="mx-auto w-4/5 my-8">
-		<a href="/movies/create" class="uppercase border border-gray-500 text-lg py-4 px-6 rounded transition transition-all bg-gray-800 text-white hover:bg-white hover:text-gray-800">
+	<div class="w-4/5 mx-auto my-8">
+		<a href="/movies/create" class="px-6 py-4 text-lg text-white uppercase transition-all transition bg-gray-800 border border-gray-500 rounded hover:bg-white hover:text-gray-800">
 			Create New movie
 		</a>
 	</div>
 	<div
-		class="md:grid lg:grid-cols-3 gap-20 w-4/5 mx-auto py-15 ">
+		class="w-4/5 gap-20 mx-auto md:grid lg:grid-cols-3 py-15 ">
 		<!-- Review Item -->
 		{% for movie in movies %}
-			<div class="text-center pt-8 pb-4">
-				<img src="{{ movie.imagePath }}" alt="" class="shadow-xl rounded-md"/>
+			<div class="pt-8 pb-4 text-center">
+				<img src="{{ movie.imagePath }}" alt="" class="rounded-md shadow-xl"/>
 
-				<h2 class="text-gray-700 font-bold text-3xl py-2">
+				<h2 class="py-2 text-3xl font-bold text-gray-700">
 					{{ movie.title }}
 				</h2>
 
 				<span class="text-gray-500">
 					By
-					<span class="italic text-sm text-gray-800">Code With Dary | 28.01.2022
+					<span class="text-sm italic text-gray-800">Code With Dary | 28.01.2022
 					</span>
 
-					<p class="text-base text-gray-700 pt-4 pb-10 leading-8 font-light">
+					<p class="pt-4 pb-10 text-base font-light leading-8 text-gray-700">
 						{{ movie.description }}
 					</p>
 
-					<a href="/movies/show/{{ movie.id }}" class="uppercase border border-gray-500 text-gray-600 text-lg py-4 px-12 rounded transition transition-all hover:bg-gray-800 hover:text-white">
+					<a href="/movies/show/{{ movie.id }}" class="px-12 py-4 text-lg text-gray-600 uppercase transition-all transition border border-gray-500 rounded hover:bg-gray-800 hover:text-white">
 						Keep Reading
 					</a>
 				</div>
